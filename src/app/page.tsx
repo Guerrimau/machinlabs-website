@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "Desarrollo de software personalizado, ciencia de datos y automatización para transformar y optimizar tu empresa.",
 };
 
-export default function LandingPage() {
+export default function HomePage() {
   return (
     <div className=" font-sans bg-gray-50">
       <header className="flex sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
