@@ -1,5 +1,3 @@
-'use client'
-
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -8,11 +6,12 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Coffee,  ArrowRight, Check, ShoppingBag, Gift, BarChart, PhoneIcon as WhatsApp } from 'lucide-react'
 import { Smartphone, MessageSquare, BarChart3 } from 'lucide-react'
+import { Metadata } from "next"
 
-// export const metadata: Metadata = {
-//   title: "Kofei by Machinlabs | Sistema de Fidelización para Cafeterías",
-//   description: "Transforma tu cafetería con Kofei, el sistema de fidelización invisible que aumenta tus ventas y mejora la experiencia de tus clientes.",
-// }
+export const metadata: Metadata = {
+  title: "Kofei - Sistema de Fidelización para Cafeterías",
+  description: "Transforma tu cafetería con Kofei, el sistema de fidelización invisible que aumenta tus ventas y mejora la experiencia de tus clientes.",
+}
 
 export default function LandingPage() {
  const benefits = [
@@ -78,12 +77,6 @@ export default function LandingPage() {
     }
   ];
 
-  // const { register, handleSubmit, formState: { errors } } = useForm();
-
-  // const onSubmit = (data) => {
-  //   console.log(data);
-  //   // Handle form submission
-  // };
 
   return (
     <div className="min-h-screen">
@@ -116,7 +109,7 @@ export default function LandingPage() {
         <div className="relative max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tight">
-              Haz que tus Clientes Regresen Más y Aumenten sus Compras con un <span className="block text-[#E5B299] mt-2"> Sistema de Recompensas Automático</span>
+              Haz que tus Clientes Regresen y Aumenten sus Compras con un <span className="block text-[#E5B299] mt-2"> Sistema de Recompensas Automático</span>
             </h1>
             <p className="mt-6 max-w-2xl mx-auto text-xl text-gray-300">
               Transforma cada visita en una oportunidad para que tus clientes vuelvan más seguido y gasten más. Con nuestro sistema fácil de implementar, premias su lealtad sin complicaciones.
@@ -333,7 +326,7 @@ export default function LandingPage() {
                       className="w-full bg-white border-[#1A120B] text-[#1A120B] hover:bg-[#F3E9DD] text-lg py-6"
                       asChild
                     >
-                      <Link href="https://wa.me/34123456789" target="_blank" rel="noopener noreferrer">
+                      <Link href="https://w.app/YbP0So" target="_blank" rel="noopener noreferrer">
                         <WhatsApp className="mr-2 h-5 w-5" />
                         Quiero hablar con un experto ahora
                       </Link>
