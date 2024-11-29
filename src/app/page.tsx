@@ -14,8 +14,7 @@ import {
   Zap,
 } from "lucide-react";
 import Link from "next/link";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { ContactForm } from "./_components/contact-form";
 
 export const metadata: Metadata = {
   title:
@@ -381,57 +380,7 @@ export default function HomePage() {
           </div>
           <div className="bg-white rounded-xl shadow-xl overflow-hidden">
             <div className="p-6">
-              <form className="space-y-4">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Nombre
-                  </label>
-                  <Input
-                    id="name"
-                    type="text"
-                    placeholder="Ej. María González"
-                    required
-                    className="w-full border rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Correo electrónico
-                  </label>
-                  <Input
-                    id="email"
-                    type="email"
-                    placeholder="Ej. maria@empresa.com"
-                    required
-                    className="w-full border rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-gray-700 mb-1"
-                  >
-                    Mensaje
-                  </label>
-                  <Textarea
-                    id="message"
-                    placeholder="Ej. Necesito una aplicación web para gestionar mi inventario..."
-                    className="w-full border rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent min-h-[120px]"
-                  ></Textarea>
-                </div>
-                <button
-                  type="submit"
-                  className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg transition-colors"
-                >
-                  Solicitar consulta gratuita
-                </button>
-              </form>
+              <ContactForm />
             </div>
           </div>
           <div className="mt-8 text-center">

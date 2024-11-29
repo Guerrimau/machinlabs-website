@@ -1,7 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 import {
   Card,
   CardContent,
@@ -15,17 +13,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import {
-  Coffee,
-  ArrowRight,
-  Check,
-  ShoppingBag,
-  Gift,
-  BarChart,
-  PhoneIcon as WhatsApp,
-} from "lucide-react";
+import { Coffee, Check, ShoppingBag, Gift, BarChart } from "lucide-react";
 import { Smartphone, MessageSquare, BarChart3 } from "lucide-react";
 import { Metadata } from "next";
+import { ContactForm } from "./_components/contact-form";
 
 export const metadata: Metadata = {
   title: "Kofei - Sistema de Fidelización para Cafeterías",
@@ -121,29 +112,31 @@ export default function LandingPage() {
 
             {/* Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              <a
+              <Link
                 href="#sobre-nosotros"
                 className="text-gray-600 hover:text-[#1A120B]"
               >
                 Sobre Nosotros
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#beneficios"
                 className="text-gray-600 hover:text-[#1A120B]"
               >
                 Beneficios
-              </a>
-              <a href="#planes" className="text-gray-600 hover:text-[#1A120B]">
+              </Link>
+              <Link
+                href="#planes"
+                className="text-gray-600 hover:text-[#1A120B]"
+              >
                 Planes
-              </a>
+              </Link>
             </div>
 
-            {/* CTA Button */}
-            <a href="#contacto">
+            <Link href="#contacto">
               <button className="bg-[#1A120B] text-white px-4 py-2 rounded-full text-sm font-medium hover:bg-[#2D1F15] transition-colors duration-300">
                 Quiero hablar con un experto
               </button>
-            </a>
+            </Link>
           </div>
         </nav>
       </header>
@@ -365,71 +358,7 @@ export default function LandingPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <form className="space-y-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Nombre completo
-                    </label>
-                    <Input
-                      type="text"
-                      placeholder="Javier Pérez"
-                      // {...register("name", { required: "Por favor, ingresa tu nombre" })}
-                      className="bg-white border-gray-300 focus:border-[#1A120B] focus:ring-[#1A120B]"
-                    />
-                    {/* {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>} */}
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">
-                      Correo electrónico
-                    </label>
-                    <Input
-                      type="email"
-                      placeholder="javierp@coffeshop.com"
-                      // {...register("email", {
-                      //   required: "Por favor, ingresa tu correo electrónico",
-                      //   pattern: {
-                      //     value: /\S+@\S+\.\S+/,
-                      //     message: "Por favor, ingresa un correo electrónico válido"
-                      //   }
-                      // })}
-                      className="bg-white border-gray-300 focus:border-[#1A120B] focus:ring-[#1A120B]"
-                    />
-                    {/* {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>} */}
-                  </div>
-                  <div className="flex flex-col gap-4">
-                    <Button
-                      type="submit"
-                      className="w-full bg-[#1A120B] hover:bg-[#2D1F15] text-white text-lg py-5"
-                    >
-                      <span className="block sm:hidden">
-                        ¡Quiero mejorar la lealtad ahora!
-                      </span>
-                      <span className="hidden sm:block">
-                        ¡Sí, quiero mejorar la lealtad de mis clientes ahora!
-                      </span>
-                      <ArrowRight className="ml-2 h-5 w-5 md:block sm:hidden" />
-                    </Button>
-                    <Button
-                      variant="outline"
-                      className="w-full bg-white border-[#1A120B] text-[#1A120B] hover:bg-[#F3E9DD] text-lg py-5"
-                      asChild
-                    >
-                      <Link
-                        href="https://w.app/YbP0So"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <WhatsApp className="mr-2 h-5 w-5" />
-                        <span className="block sm:hidden">
-                          Hablar con un experto
-                        </span>
-                        <span className="hidden sm:block">
-                          Quiero hablar con un experto ahora
-                        </span>
-                      </Link>
-                    </Button>
-                  </div>
-                </form>
+                <ContactForm />
               </CardContent>
             </Card>
           </div>
@@ -468,26 +397,6 @@ export default function LandingPage() {
                 Sistema de fidelización automático para cafeterías.
               </p>
             </div>
-            <div>
-              <h3 className="text-lg font-semibold mb-4">Productos</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white">
-                    Sistema de Fidelización
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white">
-                    Análisis de Clientes
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-gray-300 hover:text-white">
-                    Marketing Automatizado
-                  </a>
-                </li>
-              </ul>
-            </div>
           </div>
           <div className="mt-8 pt-8 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-gray-300">
@@ -495,14 +404,14 @@ export default function LandingPage() {
               derechos reservados.
             </p>
             <div className="flex items-center space-x-4 mt-4 md:mt-0">
-              <a
-                href="https://machinlabs.com"
+              <Link
+                href="/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-gray-300 hover:text-white"
               >
                 Desarrollado por Machinlabs
-              </a>
+              </Link>
             </div>
           </div>
         </div>
