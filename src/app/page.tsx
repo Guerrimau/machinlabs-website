@@ -14,6 +14,7 @@ import {
   Search,
   HeartHandshake,
 } from "lucide-react";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
@@ -52,7 +53,7 @@ const features = [
       "Reducción del 50% en tiempo de respuesta al cliente con nuestro WhatsApp E-commerce",
     image:
       "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=800&q=80",
-  }
+  },
 ];
 
 const steps = [
@@ -287,9 +288,11 @@ export default function HomePage() {
                   </div>
                 </div>
               </div>
-              <button className="inline-flex items-center px-6 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
-                Descubrir más
-              </button>
+              <Link href="/kofei" className="inline-flex items-center">
+                <button className="px-6 py-3 border-2 border-blue-600 text-blue-600 font-semibold rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
+                  Descubrir más
+                </button>
+              </Link>
             </div>
           </div>
         </div>
