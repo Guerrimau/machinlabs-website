@@ -276,12 +276,12 @@ export default function LandingPage() {
                       {/* Content */}
                       <div className="ml-4">
                         <div className="flex items-center">
+                          <div className="min-h-fit min-w-fit inline-flex mr-3 items-center px-3 py-1 rounded-full text-sm font-medium bg-[#E5B299] text-[#1A120B] mb-2">
+                            Paso {step.step}
+                          </div>
                           <h3 className="xs:max-w-[150px] md:min-w-fit text-xl font-semibold text-gray-900 mb-2">
                             {step.title}
                           </h3>
-                          <div className="min-h-fit min-w-fit inline-flex ml-3 items-center px-3 py-1 rounded-full text-sm font-medium bg-[#E5B299] text-[#1A120B] mb-2">
-                            Paso {step.step}
-                          </div>
                         </div>
                         <p className="text-gray-600 mt-2">{step.description}</p>
                       </div>
@@ -367,18 +367,24 @@ export default function LandingPage() {
               <CardContent>
                 <form className="space-y-4">
                   <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Nombre completo
+                    </label>
                     <Input
                       type="text"
-                      placeholder="Nombre completo"
+                      placeholder="Javier Pérez"
                       // {...register("name", { required: "Por favor, ingresa tu nombre" })}
                       className="bg-white border-gray-300 focus:border-[#1A120B] focus:ring-[#1A120B]"
                     />
                     {/* {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>} */}
                   </div>
                   <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-1">
+                      Correo electrónico
+                    </label>
                     <Input
                       type="email"
-                      placeholder="Correo electrónico empresarial"
+                      placeholder="javierp@coffeshop.com"
                       // {...register("email", {
                       //   required: "Por favor, ingresa tu correo electrónico",
                       //   pattern: {
@@ -390,31 +396,22 @@ export default function LandingPage() {
                     />
                     {/* {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>} */}
                   </div>
-                  <div>
-                    <Input
-                      type="tel"
-                      placeholder="Teléfono de contacto"
-                      // {...register("phone", { required: "Por favor, ingresa tu número de teléfono" })}
-                      className="bg-white border-gray-300 focus:border-[#1A120B] focus:ring-[#1A120B]"
-                    />
-                    {/* {errors.phone && <p className="text-red-500 text-sm mt-1">{errors.phone.message}</p>} */}
-                  </div>
                   <div className="flex flex-col gap-4">
                     <Button
                       type="submit"
-                      className="w-full bg-[#1A120B] hover:bg-[#2D1F15] text-white text-lg py-6"
+                      className="w-full bg-[#1A120B] hover:bg-[#2D1F15] text-white text-lg py-5"
                     >
                       <span className="block sm:hidden">
-                        ¡Sí, quiero mejorar la lealtad ahora!
+                        ¡Quiero mejorar la lealtad ahora!
                       </span>
                       <span className="hidden sm:block">
                         ¡Sí, quiero mejorar la lealtad de mis clientes ahora!
                       </span>
-                      <ArrowRight className="ml-2 h-5 w-5" />
+                      <ArrowRight className="ml-2 h-5 w-5 md:block sm:hidden" />
                     </Button>
                     <Button
                       variant="outline"
-                      className="w-full bg-white border-[#1A120B] text-[#1A120B] hover:bg-[#F3E9DD] text-lg py-6"
+                      className="w-full bg-white border-[#1A120B] text-[#1A120B] hover:bg-[#F3E9DD] text-lg py-5"
                       asChild
                     >
                       <Link

@@ -6,55 +6,25 @@ import {
   Cpu,
   MessageSquare,
   Rocket,
-  Brain,
-  Twitter,
-  Linkedin,
   CheckCircle2,
   Phone,
   Search,
   HeartHandshake,
+  Database,
+  Zap,
 } from "lucide-react";
 import Link from "next/link";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 export const metadata: Metadata = {
   title:
-    "Machinlabs - Desarrollo de Software, Automatización e Inteligencia Artificial en Sonora",
+    "Machinlabs - Desarrollo de Software y Automatización en Hermosillo, Sonora",
   description:
-    "Consultoría experta en desarrollo de software, automatización e inteligencia artificial para empresas en crecimiento en Sonora.",
+    "Consultoría experta en desarrollo de software, automatización e inteligencia artificial para empresas en crecimiento en Hermosillo y todo Sonora. Soluciones tecnológicas innovadoras para impulsar tu negocio local.",
   keywords:
-    "Consultoría en automatización en Sonora, Desarrollo de software personalizado, Soluciones de inteligencia artificial para negocios",
+    "Desarrollo de software Hermosillo, Automatización Sonora, Inteligencia artificial Hermosillo, Consultoría tecnológica Sonora, Soluciones digitales Hermosillo",
 };
-
-const features = [
-  {
-    icon: Code2,
-    title: "Desarrollo de Software Personalizado",
-    description:
-      "Soluciones a medida que se adaptan perfectamente a tu negocio.",
-    caption:
-      "Aumento del 40% en eficiencia operativa con nuestras soluciones personalizadas",
-    image:
-      "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    icon: Brain,
-    title: "Inteligencia Artificial y Ciencia de Datos",
-    description: "Convierte tus datos en decisiones estratégicas inteligentes.",
-    caption: "Predicciones con 95% de precisión en análisis de tendencias",
-    image:
-      "https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80",
-  },
-  {
-    icon: MessageSquare,
-    title: "Automatización",
-    description:
-      "Optimiza tus operaciones con soluciones automatizadas inteligentes.",
-    caption:
-      "Reducción del 50% en tiempo de respuesta al cliente con nuestro WhatsApp E-commerce",
-    image:
-      "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?auto=format&fit=crop&w=800&q=80",
-  },
-];
 
 const steps = [
   {
@@ -112,7 +82,7 @@ export default function HomePage() {
               Contacto
             </a>
           </nav>
-          <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors">
+          <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors hidden md:block">
             Haz crecer tu negocio hoy
           </button>
         </div>
@@ -122,15 +92,14 @@ export default function HomePage() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="md:w-1/2 space-y-6">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900">
-                Llevamos tu negocio al siguiente nivel con tecnología
-                inteligente
+                Impulsamos negocios en Hermosillo con tecnología inteligente
               </h1>
               <p className="text-xl text-gray-600">
                 Consultoría experta en desarrollo de software y soluciones
-                inteligentes para empresas en crecimiento
+                inteligentes para empresas en crecimiento en Sonora
               </p>
               <button className="flex items-center space-x-2 bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">
-                <span>Contáctanos para tu proyecto</span>
+                <span>Contáctanos para tu proyecto en Sonora</span>
                 <ArrowRight className="w-5 h-5" />
               </button>
             </div>
@@ -139,49 +108,70 @@ export default function HomePage() {
                 width={800}
                 height={600}
                 src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80"
-                alt="Innovación Tecnológica"
+                alt="Innovación Tecnológica en Hermosillo"
                 className="rounded-2xl shadow-2xl"
               />
             </div>
           </div>
         </div>
       </section>
-      <section id="services" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">Nuestros Servicios</h2>
-            <p className="text-xl text-gray-600">
-              Soluciones tecnológicas personalizadas para impulsar tu
-              crecimiento
-            </p>
-          </div>
-          <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="group relative overflow-hidden rounded-2xl bg-white shadow-xl transition-all hover:shadow-2xl"
-              >
-                <div className="aspect-video w-full overflow-hidden">
-                  <Image
-                    src={feature.image}
-                    alt={feature.title}
-                    width={800}
-                    height={600}
-                    className="h-full w-full object-cover transition-transform group-hover:scale-105"
-                  />
-                </div>
-                <div className="p-6">
-                  <feature.icon className="h-12 w-12 text-blue-600 mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">
-                    {feature.title}
-                  </h3>
-                  <p className="text-gray-600 mb-4">{feature.description}</p>
-                  <p className="text-sm text-blue-600 font-medium">
-                    {feature.caption}
-                  </p>
-                </div>
+      <section id="servicios" className="py-16 flex">
+        <div className="container mx-auto">
+          <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
+            Nuestros Servicios en Hermosillo y Sonora
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
+              <div className="bg-blue-100 p-3 rounded-lg inline-block mb-4">
+                <Code2 className="h-8 w-8 text-blue-600" />
               </div>
-            ))}
+              <h3 className="text-xl font-semibold mb-2 text-gray-900">
+                Desarrollo de software a medida
+              </h3>
+              <p className="mb-4 text-gray-600">
+                Aplicaciones robustas y escalables diseñadas para resolver los
+                retos únicos de tu negocio en Sonora.
+              </p>
+              <div className="border-t border-gray-200 my-4"></div>
+              <p className="text-sm text-blue-600">
+                Reduce tus costos operativos en un 20% con soluciones
+                personalizadas para empresas de Hermosillo
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
+              <div className="bg-green-100 p-3 rounded-lg inline-block mb-4">
+                <Database className="h-8 w-8 text-green-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900">
+                Ciencia de Datos
+              </h3>
+              <p className="mb-4 text-gray-600">
+                Convierte datos en decisiones inteligentes con nuestras
+                soluciones de analítica avanzada.
+              </p>
+              <div className="border-t border-gray-200 my-4"></div>
+              <p className="text-sm text-green-600">
+                Aumenta tus ingresos hasta un 15% con decisiones basadas en
+                datos para tu empresa en Hermosillo
+              </p>
+            </div>
+            <div className="bg-white p-6 rounded-lg shadow-lg transition-transform duration-300 hover:scale-105">
+              <div className="bg-purple-100 p-3 rounded-lg inline-block mb-4">
+                <Zap className="h-8 w-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-semibold mb-2 text-gray-900">
+                Automatización
+              </h3>
+              <p className="mb-4 text-gray-600">
+                Ahorra tiempo y dinero automatizando tareas repetitivas y
+                optimizando operaciones clave.
+              </p>
+              <div className="border-t border-gray-200 my-4"></div>
+              <p className="text-sm text-purple-600">
+                Mejora la eficiencia de tus procesos hasta en un 30% en tu
+                empresa de Sonora
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -226,6 +216,13 @@ export default function HomePage() {
       </section>
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold mb-4">Nuestros Productos</h2>
+            <p className="text-xl text-gray-600">
+              Soluciones innovadoras diseñadas para impulsar tu negocio en
+              Hermosillo y todo Sonora
+            </p>
+          </div>
           <div className="flex flex-col md:flex-row items-center gap-12">
             <div className="md:w-1/2">
               <Image
@@ -238,8 +235,9 @@ export default function HomePage() {
             </div>
             <div className="md:w-1/2 space-y-8">
               <div>
+                <h3 className="text-2xl font-bold mb-2 text-blue-600">Kofei</h3>
                 <h2 className="text-3xl font-bold mb-4">
-                  Fidelización y Automatización para Cafeterías con Kofei
+                  Fidelización y Automatización para Cafeterías
                 </h2>
                 <p className="text-xl text-gray-600">
                   Descubre cómo nuestro sistema de fidelización y automatización
@@ -366,39 +364,67 @@ export default function HomePage() {
         <div className="container max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">
-              ¿Listo para impulsar tu negocio?
+              ¿Listo para impulsar tu negocio en Sonora?
             </h2>
             <p className="text-xl text-gray-600 mb-4">
-              Contáctanos hoy y descubre cómo podemos transformar tu empresa con
-              tecnología inteligente
+              Contáctanos hoy y descubre cómo podemos transformar tu empresa en
+              Hermosillo con tecnología inteligente
             </p>
             <p className="text-lg text-blue-600 font-semibold">
-              Oferta especial: 20% de descuento en tu primer proyecto
+              Oferta especial: 20% de descuento en tu primer proyecto para
+              empresas locales
             </p>
             <p className="text-sm text-gray-500">
-              Válido solo para las próximas 2 empresas. ¡No pierdas esta
-              oportunidad!
+              Válido solo para las próximas 2 empresas en Sonora. ¡No pierdas
+              esta oportunidad!
             </p>
           </div>
           <div className="bg-white rounded-xl shadow-xl overflow-hidden">
             <div className="p-6">
               <form className="space-y-4">
-                <input
-                  type="text"
-                  placeholder="Tu nombre"
-                  required
-                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                />
-                <input
-                  type="email"
-                  placeholder="Tu correo electrónico"
-                  required
-                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                />
-                <textarea
-                  placeholder="Cuéntanos sobre tu proyecto o necesidad"
-                  className="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent min-h-[120px]"
-                ></textarea>
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    Nombre
+                  </label>
+                  <Input
+                    id="name"
+                    type="text"
+                    placeholder="Ej. María González"
+                    required
+                    className="w-full border rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    Correo electrónico
+                  </label>
+                  <Input
+                    id="email"
+                    type="email"
+                    placeholder="Ej. maria@empresa.com"
+                    required
+                    className="w-full border rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-1"
+                  >
+                    Mensaje
+                  </label>
+                  <Textarea
+                    id="message"
+                    placeholder="Ej. Necesito una aplicación web para gestionar mi inventario..."
+                    className="w-full border rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent min-h-[120px]"
+                  ></Textarea>
+                </div>
                 <button
                   type="submit"
                   className="w-full bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg transition-colors"
@@ -435,15 +461,15 @@ export default function HomePage() {
       </section>
       <footer className="bg-gray-900 text-gray-300">
         <div className="container mx-auto px-4 py-12">
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 gap-8">
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <Cpu className="h-6 w-6 text-blue-500" />
                 <span className="font-bold text-white">Machinlabs</span>
               </div>
               <p className="text-sm">
-                Impulsando negocios a través de soluciones tecnológicas
-                innovadoras.
+                Impulsando negocios en Hermosillo y todo Sonora a través de
+                soluciones tecnológicas innovadoras.
               </p>
             </div>
             <div>
@@ -473,51 +499,14 @@ export default function HomePage() {
                     Contacto
                   </a>
                 </li>
-                <li>
-                  <a
-                    href="#whatsapp"
-                    className="hover:text-blue-500 transition-colors"
-                  >
-                    Tienda Virtual con Asistente Virtual
-                  </a>
-                </li>
               </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold text-white mb-4">Legal</h3>
-              <ul className="space-y-2">
-                <li>
-                  <a
-                    href="/privacidad"
-                    className="hover:text-blue-500 transition-colors"
-                  >
-                    Política de Privacidad
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="/terminos"
-                    className="hover:text-blue-500 transition-colors"
-                  >
-                    Términos y Condiciones
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-semibold text-white mb-4">Síguenos</h3>
-              <div className="flex space-x-4">
-                <a href="#" className="hover:text-blue-500 transition-colors">
-                  <Twitter className="h-5 w-5" />
-                </a>
-                <a href="#" className="hover:text-blue-500 transition-colors">
-                  <Linkedin className="h-5 w-5" />
-                </a>
-              </div>
             </div>
           </div>
           <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-            <p>&copy; 2024 Machinlabs. Todos los derechos reservados.</p>
+            <p>
+              &copy; 2024 Machinlabs. Todos los derechos reservados. Hermosillo,
+              Sonora, México.
+            </p>
           </div>
         </div>
       </footer>
