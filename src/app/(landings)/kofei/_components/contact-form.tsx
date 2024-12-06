@@ -120,7 +120,7 @@ export const ContactForm = () => {
               asChild
             >
               <Link
-                href="https://w.app/YbP0So"
+                href="https://wa.me/526623691327"
                 target="_blank"
                 rel="noopener noreferrer"
               >

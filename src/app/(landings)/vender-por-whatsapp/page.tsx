@@ -358,7 +358,7 @@ export default function LandingPage() {
             <div className="mt-12 text-center">
               <p className="text-gray-600 mb-4">¿Prefieres una consulta personalizada?</p>
               <Button variant="outline" className="bg-white" asChild>
-                <Link href="https://wa.me/34123456789" target="_blank" rel="noopener noreferrer">
+                <Link href="https://wa.me/526623691327" target="_blank" rel="noopener noreferrer">
                   <MessageSquare className="mr-2 h-4 w-4" />
                   Quiero hablar con un experto en WhatsApp ahora
                 </Link>
@@ -426,7 +426,7 @@ export default function LandingPage() {
                 <Link href="https://linkedin.com/company/machinlabs" className="text-gray-400 hover:text-white transition-colors">
                   <Linkedin className="h-6 w-6" />
                 </Link>
-                <Link href="https://wa.me/34123456789" className="text-gray-400 hover:text-white transition-colors">
+                <Link href="https://wa.me/526623691327" className="text-gray-400 hover:text-white transition-colors">
                   <MessageSquare className="h-6 w-6" />
                 </Link>
               </div>

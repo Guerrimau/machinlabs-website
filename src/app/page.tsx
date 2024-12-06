@@ -389,7 +389,7 @@ export default function HomePage() {
             </p>
             <div className="flex justify-center gap-4">
               <a
-                href="https://w.app/YbP0So"
+                href="https://wa.me/526623691327"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-green-600 hover:text-green-700"
