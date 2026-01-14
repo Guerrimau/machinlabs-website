@@ -244,26 +244,6 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="bg-white rounded-xl shadow-xl overflow-hidden">
-              <div className="p-6">
-                <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6">
-                  <Image
-                    src="/placeholder.svg"
-                    alt="Jose Manuel Pulido"
-                    width={128}
-                    height={128}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="text-center">
-                  <h3 className="text-2xl font-semibold mb-2">Jose Manuel Pulido</h3>
-                  <p className="text-blue-600 mb-4">Data Scientist</p>
-                  <p className="text-gray-600 mb-0">
-                    Científico de datos especializado en transformar datos complejos en insights accionables para potenciar estrategias de negocio.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </section>
